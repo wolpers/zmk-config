@@ -107,7 +107,8 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp E>, <&kp RA(N5)>;
- // E €
+
+            // E €
         };
 
         td_p_para: tap_dance_p_para {
@@ -115,7 +116,8 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp P>, <&kp RA(N3)>;
- // P §
+
+            // P §
         };
 
         td_n1: tap_dance_n1 {
@@ -207,7 +209,8 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp S>, <&kp RA(S)>;
- // ß
+
+            // ß
         };
 
         // German umlauts with proper shift support
@@ -216,7 +219,9 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RA(Q)>, <&kp RA(LS(Q))>;
- // ä / Ä
+
+            // ä / Ä
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -224,7 +229,9 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RA(P)>, <&kp RA(LS(P))>;
- // ö / Ö
+
+            // ö / Ö
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -232,7 +239,9 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RA(Y)>, <&kp RA(LS(Y))>;
- // ü / Ü
+
+            // ü / Ü
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -303,9 +312,9 @@
         extra_layer_1 {
             display-name = "EXTRA 1";
             bindings = <
-&bt BT_CLR  &bootloader  &sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2  &trans  &trans
-&trans      &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 3    &bt BT_SEL 4     &trans        &trans  &trans
-&trans      &trans       &trans      &trans  &trans  &trans                  &trans  &studio_unlock  &rgb_ug RGB_TOG  &trans        &trans  &trans
+&bt BT_CLR  &bootloader  &sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2  &trans  &kp C_VOLUME_UP
+&trans      &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 3    &bt BT_SEL 4     &trans        &trans  &kp C_MUTE
+&trans      &trans       &trans      &trans  &trans  &trans                  &trans  &studio_unlock  &rgb_ug RGB_TOG  &trans        &trans  &kp C_VOLUME_DOWN
                                      &trans  &trans  &trans                  &trans  &trans          &trans
             >;
         };
