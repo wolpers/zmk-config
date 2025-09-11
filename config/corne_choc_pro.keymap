@@ -68,9 +68,9 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &trans  &trans  &td_paren  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &td_angle  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &td_bracket  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
-&trans  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                  &td_curly  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
+&trans  &trans        &trans           &trans        &trans        &trans          &trans  &trans  &td_paren  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &td_angle  &trans
+&trans  &trans        &trans           &trans        &trans        &trans          &trans  &trans  &td_bracket  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
+&trans  &trans        &trans           &trans        &trans        &trans                  &td_curly  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
                                        &trans        &trans        &trans                          &trans  &kp NUMBER_0  &trans
             >;
         };
