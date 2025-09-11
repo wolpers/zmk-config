@@ -157,6 +157,55 @@
             bindings = <&kp N8>, <&kp ASTRK>;
         };
 
+        td_s_eszett: tap_dance_s_eszett {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp S>, <&kp RA(S)>; // ß
+        };
+
+        // German umlauts with proper shift support
+        mm_a_umlaut: mod_morph_a_umlaut {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(Q)>, <&kp RA(LS(Q))>; // ä / Ä
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_o_umlaut: mod_morph_o_umlaut {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(P)>, <&kp RA(LS(P))>; // ö / Ö
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_u_umlaut: mod_morph_u_umlaut {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(Y)>, <&kp RA(LS(Y))>; // ü / Ü
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        td_a_umlaut: tap_dance_a_umlaut {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp A>, <&mm_a_umlaut>;
+        };
+
+        td_o_umlaut: tap_dance_o_umlaut {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp O>, <&mm_o_umlaut>;
+        };
+
+        td_u_umlaut: tap_dance_u_umlaut {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp U>, <&mm_u_umlaut>;
+        };
     };
 
     conditional_layers {
@@ -174,8 +223,8 @@
         default_layer {
             display-name = "QWERTZ";
             bindings = <
-&kp ESCAPE        &kp Q  &kp W  &kp E             &kp R  &kp T    &trans  &trans  &kp Z      &kp U  &kp I         &kp O    &kp P      &kp ENTER
-&kp LEFT_SHIFT    &kp A  &kp S  &kp D             &kp F  &kp G    &trans  &trans  &kp H      &kp J  &kp K         &kp L    &td_quote  &kp RIGHT_SHIFT
+&kp ESCAPE        &kp Q  &kp W  &kp E             &kp R  &kp T    &trans  &trans  &kp Z      &td_u_umlaut  &kp I         &td_o_umlaut    &kp P      &kp ENTER
+&kp LEFT_SHIFT    &td_a_umlaut  &td_s_eszett  &kp D             &kp F  &kp G    &trans  &trans  &kp H      &kp J  &kp K         &kp L    &td_quote  &kp RIGHT_SHIFT
 &kp LEFT_CONTROL  &kp Y  &kp X  &kp C             &kp V  &kp B                    &kp N      &kp M  &td_comma     &td_dot  &td_slash  &kp RIGHT_CONTROL
                                 &mm_gui_complete  &mo 1  &kp TAB                  &kp SPACE  &mo 2  &mm_bspc_del
             >;
