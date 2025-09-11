@@ -106,126 +106,133 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp E>, <&kp RA(N5)>; // E €
+            bindings = <&kp E>, <&kp RA(N5)>;
+ // E €
         };
 
         td_p_para: tap_dance_p_para {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp P>, <&kp RA(N3)>; // P §
+            bindings = <&kp P>, <&kp RA(N3)>;
+ // P §
         };
 
-         td_n1: tap_dance_n1 {
-             compatible = "zmk,behavior-tap-dance";
-             #binding-cells = <0>;
-             tapping-term-ms = <200>;
-             bindings = <&kp N1>, <&kp EXCL>, <&kp F1>;
-         };
+        td_n1: tap_dance_n1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N1>, <&kp EXCL>, <&kp F1>;
+        };
 
-         td_n2: tap_dance_n2 {
-             compatible = "zmk,behavior-tap-dance";
-             #binding-cells = <0>;
-             tapping-term-ms = <200>;
-             bindings = <&kp N2>, <&kp AT>, <&kp F2>;
-         };
+        td_n2: tap_dance_n2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N2>, <&kp AT>, <&kp F2>;
+        };
 
-         td_n3: tap_dance_n3 {
-             compatible = "zmk,behavior-tap-dance";
-             #binding-cells = <0>;
-             tapping-term-ms = <200>;
-             bindings = <&kp N3>, <&kp HASH>, <&kp F3>;
-         };
+        td_n3: tap_dance_n3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N3>, <&kp HASH>, <&kp F3>;
+        };
 
-         td_n4: tap_dance_n4 {
-             compatible = "zmk,behavior-tap-dance";
-             #binding-cells = <0>;
-             tapping-term-ms = <200>;
-             bindings = <&kp N4>, <&kp DLLR>, <&kp F4>;
-         };
+        td_n4: tap_dance_n4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N4>, <&kp DLLR>, <&kp F4>;
+        };
 
-         td_n5: tap_dance_n5 {
-             compatible = "zmk,behavior-tap-dance";
-             #binding-cells = <0>;
-             tapping-term-ms = <200>;
-             bindings = <&kp N5>, <&kp PRCNT>, <&kp F5>;
-         };
+        td_n5: tap_dance_n5 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N5>, <&kp PRCNT>, <&kp F5>;
+        };
 
-         td_n6: tap_dance_n6 {
-             compatible = "zmk,behavior-tap-dance";
-             #binding-cells = <0>;
-             tapping-term-ms = <200>;
-             bindings = <&kp N6>, <&kp CARET>, <&kp F6>;
-         };
+        td_n6: tap_dance_n6 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N6>, <&kp CARET>, <&kp F6>;
+        };
 
-         td_n7: tap_dance_n7 {
-             compatible = "zmk,behavior-tap-dance";
-             #binding-cells = <0>;
-             tapping-term-ms = <200>;
-             bindings = <&kp N7>, <&kp AMPS>, <&kp F7>;
-         };
+        td_n7: tap_dance_n7 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N7>, <&kp AMPS>, <&kp F7>;
+        };
 
-         td_n8: tap_dance_n8 {
-             compatible = "zmk,behavior-tap-dance";
-             #binding-cells = <0>;
-             tapping-term-ms = <200>;
-             bindings = <&kp N8>, <&kp ASTRK>, <&kp F8>;
-         };
+        td_n8: tap_dance_n8 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N8>, <&kp ASTRK>, <&kp F8>;
+        };
 
-         td_n9: tap_dance_n9 {
-             compatible = "zmk,behavior-tap-dance";
-             #binding-cells = <0>;
-             tapping-term-ms = <200>;
-             bindings = <&kp N9>, <&trans>, <&kp F9>;
-         };
+        td_n9: tap_dance_n9 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N9>, <&trans>, <&kp F9>;
+        };
 
-         td_n0: tap_dance_n0 {
-              compatible = "zmk,behavior-tap-dance";
-              #binding-cells = <0>;
-              tapping-term-ms = <200>;
-              bindings = <&kp NUMBER_0>, <&trans>, <&kp F10>;
-          };
+        td_n0: tap_dance_n0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp NUMBER_0>, <&trans>, <&kp F10>;
+        };
 
-         td_f11: tap_dance_f11 {
-             compatible = "zmk,behavior-tap-dance";
-             #binding-cells = <0>;
-             tapping-term-ms = <200>;
-             bindings = <&trans>, <&trans>, <&kp F11>;
-         };
+        td_f11: tap_dance_f11 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&trans>, <&trans>, <&kp F11>;
+        };
 
-         td_f12: tap_dance_f12 {
-             compatible = "zmk,behavior-tap-dance";
-             #binding-cells = <0>;
-             tapping-term-ms = <200>;
-             bindings = <&trans>, <&trans>, <&kp F12>;
-         };
+        td_f12: tap_dance_f12 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&trans>, <&trans>, <&kp F12>;
+        };
 
         td_s_eszett: tap_dance_s_eszett {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp S>, <&kp RA(S)>; // ß
+            bindings = <&kp S>, <&kp RA(S)>;
+ // ß
         };
 
         // German umlauts with proper shift support
+
         mm_a_umlaut: mod_morph_a_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RA(Q)>, <&kp RA(LS(Q))>; // ä / Ä
+            bindings = <&kp RA(Q)>, <&kp RA(LS(Q))>;
+ // ä / Ä
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_o_umlaut: mod_morph_o_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RA(P)>, <&kp RA(LS(P))>; // ö / Ö
+            bindings = <&kp RA(P)>, <&kp RA(LS(P))>;
+ // ö / Ö
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_u_umlaut: mod_morph_u_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RA(Y)>, <&kp RA(LS(Y))>; // ü / Ü
+            bindings = <&kp RA(Y)>, <&kp RA(LS(Y))>;
+ // ü / Ü
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -266,29 +273,30 @@
         default_layer {
             display-name = "QWERTZ";
             bindings = <
-&kp ESCAPE        &kp Q  &kp W  &td_e_euro             &kp R  &kp T    &trans  &trans  &kp Z      &td_u_umlaut  &kp I         &td_o_umlaut    &td_p_para      &kp ENTER
-&kp LEFT_SHIFT    &td_a_umlaut  &td_s_eszett  &kp D             &kp F  &kp G    &trans  &trans  &kp H      &kp J  &kp K         &kp L    &td_quote  &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp Y  &kp X  &kp C             &kp V  &kp B                    &kp N      &kp M  &td_comma     &td_dot  &td_slash  &kp RIGHT_CONTROL
-                                &mm_gui_complete  &mo 1  &kp TAB                  &kp SPACE  &mo 2  &mm_bspc_del
+&kp ESCAPE        &kp Q         &kp W         &td_e_euro        &kp R  &kp T    &trans  &trans  &kp Z      &td_u_umlaut  &kp I         &td_o_umlaut  &td_p_para  &kp ENTER
+&kp LEFT_SHIFT    &td_a_umlaut  &td_s_eszett  &kp D             &kp F  &kp G    &trans  &trans  &kp H      &kp J         &kp K         &kp L         &td_quote   &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp Y         &kp X         &kp C             &kp V  &kp B                    &kp N      &kp M         &td_comma     &td_dot       &td_slash   &kp RIGHT_CONTROL
+                                              &mm_gui_complete  &mo 1  &kp TAB                  &kp SPACE  &mo 2         &mm_bspc_del
             >;
         };
 
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &trans     &trans       &trans     &trans     &trans  &trans  &trans  &td_minus  &td_n1  &td_n2  &td_n3  &trans  &kp EQUAL
-&trans  &td_angle  &td_bracket  &td_curly  &td_paren  &trans  &trans  &trans  &kp PLUS   &td_n4  &td_n5  &td_n6  &trans  &trans
+&trans  &trans     &trans       &trans     &trans     &trans  &trans  &trans  &td_minus  &td_n1  &td_n2  &td_n3  &trans   &kp EQUAL
+&trans  &td_angle  &td_bracket  &td_curly  &td_paren  &trans  &trans  &trans  &kp PLUS   &td_n4  &td_n5  &td_n6  &trans   &trans
 &trans  &trans     &trans       &trans     &trans     &trans                  &trans     &td_n7  &td_n8  &td_n9  &td_f11  &td_f12
                                 &trans     &trans     &trans                  &trans     &td_n0  &trans
             >;
         };
+
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &trans  &trans    &kp UP    &trans   &trans  &trans  &trans  &kp CARET  &kp AMPS   &kp ASTRK  &trans  &trans  &trans
-&trans  &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &trans  &trans  &kp MINUS  &trans  &kp LBKT   &kp RBKT  &kp BSLH  &trans
-&trans  &trans    &trans    &trans    &trans     &trans                     &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &trans
-                            &trans    &trans     &trans                     &trans     &trans     &trans
+&trans  &trans  &trans    &kp UP    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans    &trans     &trans                  &trans  &trans  &trans
             >;
         };
 
