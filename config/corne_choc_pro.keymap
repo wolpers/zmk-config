@@ -68,6 +68,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -75,6 +76,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LGUI>, <&kp LALT>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -82,6 +84,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mm_gui_alt>, <&kp RALT>;
+
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
@@ -91,12 +94,11 @@
             tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&kp DQT>, <&kp GRAVE>;
         };
-
-
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
         tri_layer {
             if-layers = <1 2>;
             then-layer = <3>;
@@ -109,40 +111,40 @@
         default_layer {
             display-name = "QWERTZ";
             bindings = <
-&kp ESCAPE   &kp Q  &kp W  &kp E   &kp R  &kp T    &trans  &trans  &kp Z      &kp U  &kp I      &kp O    &kp P      &kp ENTER
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D   &kp F  &kp G    &trans  &trans  &kp H      &kp J  &kp K      &kp L    &td_quote  &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp Y  &kp X  &kp C   &kp V  &kp B                    &kp N      &kp M  &td_comma  &td_dot  &td_slash  &kp RIGHT_CONTROL
-                      &mm_gui_complete  &mo 1  &kp TAB                    &kp SPACE     &mo 2  &mm_bspc_del
+&kp ESCAPE        &kp Q  &kp W  &kp E             &kp R  &kp T    &trans  &trans  &kp Z      &kp U  &kp I         &kp O    &kp P      &kp ENTER
+&kp LEFT_SHIFT    &kp A  &kp S  &kp D             &kp F  &kp G    &trans  &trans  &kp H      &kp J  &kp K         &kp L    &td_quote  &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp Y  &kp X  &kp C             &kp V  &kp B                    &kp N      &kp M  &td_comma     &td_dot  &td_slash  &kp RIGHT_CONTROL
+                                &mm_gui_complete  &mo 1  &kp TAB                  &kp SPACE  &mo 2  &mm_bspc_del
             >;
         };
 
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &trans        &trans           &trans        &trans        &trans          &trans  &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-&trans  &td_angle        &td_bracket           &td_curly        &td_paren        &trans          &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
-&trans  &trans        &trans           &trans        &trans        &trans                  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
-                                       &trans        &trans        &trans                          &trans  &kp NUMBER_0  &trans
+&trans  &trans     &trans       &trans     &trans     &trans  &trans  &trans  &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &kp EQUAL
+&trans  &td_angle  &td_bracket  &td_curly  &td_paren  &trans  &trans  &trans  &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
+&trans  &trans     &trans       &trans     &trans     &trans                  &trans     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
+                                &trans     &trans     &trans                  &trans     &kp NUMBER_0  &trans
             >;
         };
 
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans        &kp EXCL  &kp AT    &kp UP    &kp DLLR   &kp PRCNT  &trans  &trans  &kp CARET  &kp AMPS   &kp ASTRK      &kp LPAR  &kp RPAR  &trans
-&trans    &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &trans  &trans  &kp MINUS  &kp EQUAL  &kp LBKT       &kp RBKT  &kp BSLH  &trans
-&trans  &trans    &trans    &trans    &trans     &trans                     &kp UNDER  &kp PLUS   &kp LBRC       &kp RBRC  &kp PIPE  &trans
-                                      &trans  &trans     &trans                   &trans  &trans     &trans
+&trans  &kp EXCL  &kp AT    &kp UP    &kp DLLR   &kp PRCNT  &trans  &trans  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+&trans  &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &trans  &trans  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &trans
+&trans  &trans    &trans    &trans    &trans     &trans                     &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &trans
+                            &trans    &trans     &trans                     &trans     &trans     &trans
             >;
         };
 
         extra_layer_1 {
             display-name = "EXTRA 1";
             bindings = <
-&bt BT_CLR  &bootloader        &sys_reset           &trans        &trans        &trans          &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans
-&trans      &trans        &trans           &trans        &trans         &trans    &trans  &trans  &trans  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans
-&trans  &trans    &trans  &trans    &trans   &trans                  &trans  &studio_unlock  &rgb_ug RGB_TOG  &trans  &trans  &trans
-                                       &trans        &trans        &trans                          &trans  &trans  &trans
+&bt BT_CLR  &bootloader  &sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2  &trans  &trans
+&trans      &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 3    &bt BT_SEL 4     &trans        &trans  &trans
+&trans      &trans       &trans      &trans  &trans  &trans                  &trans  &studio_unlock  &rgb_ug RGB_TOG  &trans        &trans  &trans
+                                     &trans  &trans  &trans                  &trans  &trans          &trans
             >;
         };
     };
