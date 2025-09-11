@@ -64,18 +64,32 @@
             bindings = <&kp DOT>, <&kp COLON>;
         };
 
-        td_quote: tap_dance_quote {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SQT>, <&kp DQT>;
-        };
-
         mm_bspc_del: mod_morph_backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_gui_alt: mod_morph_gui_alt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&kp LALT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_gui_complete: mod_morph_gui_complete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mm_gui_alt>, <&kp RALT>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        td_quote: tap_dance_quote {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SQT>, <&kp DQT>, <&kp GRAVE>;
         };
 
 
@@ -98,7 +112,7 @@
 &kp ESCAPE   &kp Q  &kp W  &kp E   &kp R  &kp T    &trans  &trans  &kp Z      &kp U  &kp I      &kp O    &kp P      &kp ENTER
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D   &kp F  &kp G    &trans  &trans  &kp H      &kp J  &kp K      &kp L    &td_quote  &kp RIGHT_SHIFT
 &kp LEFT_CONTROL  &kp Y  &kp X  &kp C   &kp V  &kp B                    &kp N      &kp M  &td_comma  &td_dot  &td_slash  &kp RIGHT_CONTROL
-                      &kp LGUI  &mo 1  &kp TAB                    &kp SPACE     &mo 2  &mm_bspc_del
+                      &mm_gui_complete  &mo 1  &kp TAB                    &kp SPACE     &mo 2  &mm_bspc_del
             >;
         };
 
