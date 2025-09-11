@@ -94,6 +94,69 @@
             tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&kp DQT>, <&kp GRAVE>;
         };
+
+        td_minus: tap_dance_minus {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp MINUS>, <&kp UNDER>, <&kp TILDE>;
+        };
+        td_n1: tap_dance_n1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N1>, <&kp EXCL>;
+        };
+
+        td_n2: tap_dance_n2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N2>, <&kp AT>;
+        };
+
+        td_n3: tap_dance_n3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N3>, <&kp HASH>;
+        };
+
+        td_n4: tap_dance_n4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N4>, <&kp DLLR>;
+        };
+
+        td_n5: tap_dance_n5 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N5>, <&kp PRCNT>;
+        };
+
+        td_n6: tap_dance_n6 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N6>, <&kp CARET>;
+        };
+
+        td_n7: tap_dance_n7 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N7>, <&kp AMPS>;
+        };
+
+        td_n8: tap_dance_n8 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N8>, <&kp ASTRK>;
+        };
+
     };
 
     conditional_layers {
@@ -121,9 +184,9 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &trans     &trans       &trans     &trans     &trans  &trans  &trans  &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &kp EQUAL
-&trans  &td_angle  &td_bracket  &td_curly  &td_paren  &trans  &trans  &trans  &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
-&trans  &trans     &trans       &trans     &trans     &trans                  &trans     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
+&trans  &trans     &trans       &trans     &trans     &trans  &trans  &trans  &td_minus  &td_n1  &td_n2  &td_n3  &trans  &kp EQUAL
+&trans  &td_angle  &td_bracket  &td_curly  &td_paren  &trans  &trans  &trans  &kp PLUS   &td_n4  &td_n5  &td_n6  &trans  &trans
+&trans  &trans     &trans       &trans     &trans     &trans                  &trans     &td_n7  &td_n8  &td_n9  &trans  &trans
                                 &trans     &trans     &trans                  &trans     &kp NUMBER_0  &trans
             >;
         };
