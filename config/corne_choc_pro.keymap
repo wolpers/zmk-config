@@ -102,6 +102,20 @@
             bindings = <&kp MINUS>, <&kp UNDER>, <&kp TILDE>;
         };
 
+        td_e_euro: tap_dance_e_euro {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp E>, <&kp RA(N5)>; // E €
+        };
+
+        td_p_para: tap_dance_p_para {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp P>, <&kp RA(N3)>; // P §
+        };
+
          td_n1: tap_dance_n1 {
              compatible = "zmk,behavior-tap-dance";
              #binding-cells = <0>;
@@ -252,7 +266,7 @@
         default_layer {
             display-name = "QWERTZ";
             bindings = <
-&kp ESCAPE        &kp Q  &kp W  &kp E             &kp R  &kp T    &trans  &trans  &kp Z      &td_u_umlaut  &kp I         &td_o_umlaut    &kp P      &kp ENTER
+&kp ESCAPE        &kp Q  &kp W  &td_e_euro             &kp R  &kp T    &trans  &trans  &kp Z      &td_u_umlaut  &kp I         &td_o_umlaut    &td_p_para      &kp ENTER
 &kp LEFT_SHIFT    &td_a_umlaut  &td_s_eszett  &kp D             &kp F  &kp G    &trans  &trans  &kp H      &kp J  &kp K         &kp L    &td_quote  &kp RIGHT_SHIFT
 &kp LEFT_CONTROL  &kp Y  &kp X  &kp C             &kp V  &kp B                    &kp N      &kp M  &td_comma     &td_dot  &td_slash  &kp RIGHT_CONTROL
                                 &mm_gui_complete  &mo 1  &kp TAB                  &kp SPACE  &mo 2  &mm_bspc_del
