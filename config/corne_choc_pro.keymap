@@ -186,7 +186,7 @@
             bindings = <
 &trans  &trans     &trans       &trans     &trans     &trans  &trans  &trans  &td_minus  &td_n1  &td_n2  &td_n3  &trans  &kp EQUAL
 &trans  &td_angle  &td_bracket  &td_curly  &td_paren  &trans  &trans  &trans  &kp PLUS   &td_n4  &td_n5  &td_n6  &trans  &trans
-&trans  &trans     &trans       &trans     &trans     &trans                  &trans     &td_n7  &td_n8  &td_n9  &trans  &trans
+&trans  &trans     &trans       &trans     &trans     &trans                  &trans     &td_n7  &td_n8  &kp NUMBER_9  &trans  &trans
                                 &trans     &trans     &trans                  &trans     &kp NUMBER_0  &trans
             >;
         };
