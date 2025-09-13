@@ -15,9 +15,6 @@
 
 / {
     behaviors {
-
-
-
         mm_bspc_del: mod_morph_backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -46,6 +43,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N1>, <&kp EXCL>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -53,6 +51,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp AT>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -60,6 +59,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N3>, <&kp HASH>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -67,6 +67,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N4>, <&kp DLLR>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -74,6 +75,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N5>, <&kp PRCNT>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -81,6 +83,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N6>, <&kp CARET>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -88,6 +91,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N7>, <&kp AMPS>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -95,6 +99,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N8>, <&kp ASTRK>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -102,6 +107,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp LPAR>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -109,6 +115,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_0>, <&kp RPAR>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -116,6 +123,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp HASH>, <&kp TILDE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -152,10 +160,12 @@
         };
 
         // Arrow keys with shift combinations
+
         mm_left_shome: mod_morph_left_shifthome {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp LS(HOME)>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -163,6 +173,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOWN>, <&kp LS(PG_DN)>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -170,6 +181,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LS(END)>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -177,6 +189,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp UP>, <&kp LS(PG_UP)>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -184,7 +197,9 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp RA(N5)>;
+
             mods = <(MOD_RALT)>;
+
             // E €
         };
 
@@ -192,7 +207,9 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp P>, <&kp RA(N3)>;
+
             mods = <(MOD_RALT)>;
+
             // P §
         };
 
@@ -200,7 +217,9 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp S>, <&kp RA(S)>;
+
             mods = <(MOD_RALT)>;
+
             // S ß
         };
 
@@ -208,7 +227,9 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp A>, <&mm_a_umlaut>;
+
             mods = <(MOD_RALT)>;
+
             // A ä/Ä
         };
 
@@ -216,7 +237,9 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp O>, <&mm_o_umlaut>;
+
             mods = <(MOD_RALT)>;
+
             // O ö/Ö
         };
 
@@ -224,7 +247,9 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp U>, <&mm_u_umlaut>;
+
             mods = <(MOD_RALT)>;
+
             // U ü/Ü
         };
 
@@ -232,6 +257,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -239,6 +265,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp COLON>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -246,6 +273,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp UNDER>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -276,8 +304,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp LT>, <&kp GT>;
         };
-
-
     };
 
     combos {
@@ -285,78 +311,77 @@
 
         combo_left_alt {
             bindings = <&kp LALT>;
-            key-positions = <13 26>; // left shift + left ctrl
+            key-positions = <28 14>; // left shift + left ctrl
             timeout-ms = <50>;
+            layers = <0>;
         };
 
         combo_right_altgr {
             bindings = <&kp RALT>;
-            key-positions = <25 39>; // right shift + right ctrl
+            key-positions = <39 27>; // right shift + right ctrl
             timeout-ms = <50>;
         };
 
         combo_curly {
             bindings = <&td_combo_curly>;
-            key-positions = <6 7>; // Z + U
+            key-positions = <8 9>; // Z + U
             timeout-ms = <50>;
         };
 
         combo_paren {
             bindings = <&td_combo_paren>;
-            key-positions = <7 8>; // U + I
+            key-positions = <9 10>; // U + I
             timeout-ms = <50>;
         };
 
         combo_bracket {
             bindings = <&td_combo_bracket>;
-            key-positions = <8 9>; // I + O
+            key-positions = <10 11>; // I + O
             timeout-ms = <50>;
         };
 
         combo_angle {
             bindings = <&td_combo_angle>;
-            key-positions = <9 10>; // O + P
+            key-positions = <11 12>; // O + P
             timeout-ms = <50>;
         };
 
         combo_slash {
             bindings = <&kp FSLH>;
-            key-positions = <18 19>; // H + J
+            key-positions = <22 23>; // H + J
             timeout-ms = <50>;
         };
 
         combo_pipe {
             bindings = <&kp PIPE>;
-            key-positions = <19 20>; // J + K
+            key-positions = <23 24>; // J + K
             timeout-ms = <50>;
         };
 
         combo_backslash {
             bindings = <&kp BSLH>;
-            key-positions = <20 21>; // K + L
+            key-positions = <24 25>; // K + L
             timeout-ms = <50>;
         };
 
         combo_single_quote {
             bindings = <&kp SQT>;
-            key-positions = <30 31>; // N + M
+            key-positions = <34 35>; // N + M
             timeout-ms = <50>;
         };
 
         combo_double_quote {
             bindings = <&kp DQT>;
-            key-positions = <31 32>; // M + comma
+            key-positions = <35 36>; // M + comma
             timeout-ms = <50>;
         };
 
         combo_grave {
             bindings = <&kp GRAVE>;
-            key-positions = <32 33>; // comma + dot
+            key-positions = <36 37>; // comma + dot
             timeout-ms = <50>;
         };
-
     };
-
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -373,30 +398,30 @@
         default_layer {
             display-name = "QWERTZ";
             bindings = <
-&kp ESCAPE        &kp Q         &kp W         &mm_e_euro        &kp R  &kp T    &trans  &trans  &kp Z      &mm_u_umlaut_key  &kp I         &mm_o_umlaut_key  &mm_p_para  &kp ENTER
-&kp LEFT_SHIFT    &mm_a_umlaut_key  &mm_s_eszett  &kp D             &kp F  &kp G    &trans  &trans  &kp H      &kp J         &kp K         &kp L         &mm_hash_tilde   &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp Y         &kp X         &kp C             &kp V  &kp B                    &kp N      &kp M         &mm_comma_semi     &mm_dot_colon       &mm_minus_under   &kp RIGHT_CONTROL
-                                              &kp LGUI  &mo 1  &kp TAB                  &kp SPACE  &mo 2         &mm_bspc_del
+&kp ESCAPE        &kp Q             &kp W         &mm_e_euro  &kp R  &kp T    &trans  &trans  &kp Z      &mm_u_umlaut_key  &kp I           &mm_o_umlaut_key  &mm_p_para       &kp ENTER
+&kp LEFT_SHIFT    &mm_a_umlaut_key  &mm_s_eszett  &kp D       &kp F  &kp G    &trans  &trans  &kp H      &kp J             &kp K           &kp L             &mm_hash_tilde   &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp Y             &kp X         &kp C       &kp V  &kp B                    &kp N      &kp M             &mm_comma_semi  &mm_dot_colon     &mm_minus_under  &kp RIGHT_CONTROL
+                                                  &kp LGUI    &mo 1  &kp TAB                  &kp SPACE  &mo 2             &mm_bspc_del
             >;
         };
 
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &trans     &trans       &trans     &trans     &trans  &trans  &trans  &kp ASTRK  &mm_n1  &mm_n2  &mm_n3  &kp PLUS   &kp EQUAL
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp FSLH   &mm_n4  &mm_n5  &mm_n6  &kp MINUS   &trans
-&trans  &trans     &trans       &trans     &trans     &trans                  &kp CARET     &mm_n7  &mm_n8  &mm_n9  &trans  &trans
-                                &trans     &trans     &trans                  &trans     &mm_n0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ASTRK  &mm_n1  &mm_n2  &mm_n3  &kp PLUS   &kp EQUAL
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp FSLH   &mm_n4  &mm_n5  &mm_n6  &kp MINUS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp CARET  &mm_n7  &mm_n8  &mm_n9  &trans     &trans
+                        &trans  &trans  &trans                  &trans     &mm_n0  &trans
             >;
         };
 
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &trans  &trans    &mm_up_spgup    &trans     &trans  &trans  &trans  &trans  &kp F1  &kp F2  &kp F3  &trans  &trans
-&trans  &trans  &mm_left_shome  &mm_down_spgdn  &mm_right_send  &trans  &trans  &trans  &trans  &kp F4  &kp F5  &kp F6  &trans  &trans
-&trans  &trans  &trans    &trans    &trans     &trans                  &trans  &kp F7  &kp F8  &kp F9  &kp F11  &kp F12
-                          &trans    &trans     &trans                  &trans  &kp F10  &trans
+&trans  &trans  &trans          &mm_up_spgup    &trans          &trans  &trans  &trans  &trans  &kp F1   &kp F2  &kp F3  &trans   &trans
+&trans  &trans  &mm_left_shome  &mm_down_spgdn  &mm_right_send  &trans  &trans  &trans  &trans  &kp F4   &kp F5  &kp F6  &trans   &trans
+&trans  &trans  &trans          &trans          &trans          &trans                  &trans  &kp F7   &kp F8  &kp F9  &kp F11  &kp F12
+                                &trans          &trans          &trans                  &trans  &kp F10  &trans
             >;
         };
 
