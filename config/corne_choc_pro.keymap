@@ -15,28 +15,23 @@
 
 / {
     behaviors {
+
+        ht_sticky: hold_tap_sticky {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&sk>;
+        };
+
+
         mm_bspc_del: mod_morph_backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_gui_alt: mod_morph_gui_alt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp LALT>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_gui_complete: mod_morph_gui_complete {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mm_gui_alt>, <&kp RALT>;
-
-            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         mm_n1: mod_morph_n1 {
@@ -253,6 +248,15 @@
             // U ü/Ü
         };
 
+        mm_enter_esc: mod_morph_enter_esc {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER>, <&kp ESCAPE>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
         mm_comma_semi: mod_morph_comma_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -308,19 +312,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        combo_left_alt {
-            bindings = <&kp LALT>;
-            key-positions = <28 14>; // left shift + left ctrl
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_right_altgr {
-            bindings = <&kp RALT>;
-            key-positions = <39 27>; // right shift + right ctrl
-            timeout-ms = <50>;
-        };
 
         combo_curly {
             bindings = <&td_combo_curly>;
@@ -398,10 +389,10 @@
         default_layer {
             display-name = "QWERTZ";
             bindings = <
-&kp ESCAPE        &kp Q             &kp W         &mm_e_euro  &kp R  &kp T    &trans  &trans  &kp Z      &mm_u_umlaut_key  &kp I           &mm_o_umlaut_key  &mm_p_para       &kp ENTER
-&kp LEFT_SHIFT    &mm_a_umlaut_key  &mm_s_eszett  &kp D       &kp F  &kp G    &trans  &trans  &kp H      &kp J             &kp K           &kp L             &mm_hash_tilde   &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp Y             &kp X         &kp C       &kp V  &kp B                    &kp N      &kp M             &mm_comma_semi  &mm_dot_colon     &mm_minus_under  &kp RIGHT_CONTROL
-                                                  &kp LGUI    &mo 1  &kp TAB                  &kp SPACE  &mo 2             &mm_bspc_del
+&ht_sticky LOPT LOPT        &kp Q             &kp W         &mm_e_euro  &kp R  &kp T    &trans  &trans  &kp Z      &mm_u_umlaut_key  &kp I           &mm_o_umlaut_key  &mm_p_para       &mm_enter_esc
+&ht_sticky LSHIFT LSHIFT    &mm_a_umlaut_key  &mm_s_eszett  &kp D       &kp F  &kp G    &trans  &trans  &kp H      &kp J             &kp K           &kp L             &mm_hash_tilde   &ht_sticky RSHIFT RSHIFT
+&ht_sticky LCTRL LCTRL  &kp Y             &kp X         &kp C       &kp V  &kp B                    &kp N      &kp M             &mm_comma_semi  &mm_dot_colon     &mm_minus_under  &ht_sticky RCTRL RCTRL
+                                                  &kp LCMD    &mo 1  &kp TAB                  &kp SPACE  &mo 2             &mm_bspc_del
             >;
         };
 
