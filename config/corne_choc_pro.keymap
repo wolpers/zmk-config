@@ -290,96 +290,40 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        td_combo_curly: tap_dance_combo_curly {
+        td_curly: tap_dance_curly {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LBRC>, <&kp RBRC>;
         };
 
-        td_combo_paren: tap_dance_combo_paren {
+        td_paren: tap_dance_paren {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LPAR>, <&kp RPAR>;
         };
 
-        td_combo_bracket: tap_dance_combo_bracket {
+        td_bracket: tap_dance_bracket {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LBKT>, <&kp RBKT>;
         };
 
-        td_combo_angle: tap_dance_combo_angle {
+        td_angle: tap_dance_angle {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LT>, <&kp GT>;
         };
-    };
 
-    combos {
-        compatible = "zmk,combos";
-
-        combo_curly {
-            bindings = <&td_combo_curly>;
-            key-positions = <8 9>; // Z + U
-            timeout-ms = <50>;
-        };
-
-        combo_paren {
-            bindings = <&td_combo_paren>;
-            key-positions = <9 10>; // U + I
-            timeout-ms = <50>;
-        };
-
-        combo_bracket {
-            bindings = <&td_combo_bracket>;
-            key-positions = <10 11>; // I + O
-            timeout-ms = <50>;
-        };
-
-        combo_angle {
-            bindings = <&td_combo_angle>;
-            key-positions = <11 12>; // O + P
-            timeout-ms = <50>;
-        };
-
-        combo_slash {
-            bindings = <&kp FSLH>;
-            key-positions = <22 23>; // H + J
-            timeout-ms = <50>;
-        };
-
-        combo_pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <23 24>; // J + K
-            timeout-ms = <50>;
-        };
-
-        combo_backslash {
-            bindings = <&kp BSLH>;
-            key-positions = <24 25>; // K + L
-            timeout-ms = <50>;
-        };
-
-        combo_single_quote {
-            bindings = <&kp SQT>;
-            key-positions = <34 35>; // N + M
-            timeout-ms = <50>;
-        };
-
-        combo_double_quote {
-            bindings = <&kp DQT>;
-            key-positions = <35 36>; // M + comma
-            timeout-ms = <50>;
-        };
-
-        combo_grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <36 37>; // comma + dot
-            timeout-ms = <50>;
+        unicode_input: unicode_input {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LOPT>,
+                       <&macro_tap &kp KP_PLUS>,
+                       <&macro_release &kp LOPT>;
         };
     };
 
@@ -408,10 +352,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ASTRK  &mm_n1  &mm_n2  &mm_n3  &kp PLUS   &kp EQUAL
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp FSLH   &mm_n4  &mm_n5  &mm_n6  &kp MINUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp CARET  &mm_n7  &mm_n8  &mm_n9  &trans     &trans
-                        &trans  &trans  &trans                  &trans     &mm_n0  &trans
+&unicode_input  &trans  &td_angle    &td_bracket  &td_paren  &td_curly  &trans  &trans  &kp ASTRK  &mm_n1  &mm_n2  &mm_n3  &kp PLUS   &kp EQUAL
+&trans  &trans  &trans             &kp BSLH           &kp PIPE         &kp FSLH         &trans  &trans  &kp FSLH   &mm_n4  &mm_n5  &mm_n6  &kp MINUS  &trans
+&trans  &trans  &trans             &kp GRAVE          &kp SQT          &kp DQT                          &kp CARET  &mm_n7  &mm_n8  &mm_n9  &trans     &trans
+                                   &trans             &trans           &trans                           &trans     &mm_n0  &trans
             >;
         };
 
