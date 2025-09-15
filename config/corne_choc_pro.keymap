@@ -8,6 +8,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
+#include "keys_de.h"
+
+// https://zmk.dev/docs/keymaps/list-of-keycodes#consumer-controls
+// https://github.com/Dakes/zmk-config/blob/9ba19caeebd6c74502f16ab85ae02a5b663e20b0/config/keymap-german-rev3.h#L39
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
@@ -28,95 +32,6 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_n1: mod_morph_n1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N1>, <&kp EXCL>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_n2: mod_morph_n2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp AT>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_n3: mod_morph_n3 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N3>, <&kp HASH>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_n4: mod_morph_n4 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N4>, <&kp DLLR>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_n5: mod_morph_n5 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N5>, <&kp PRCNT>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_n6: mod_morph_n6 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N6>, <&kp CARET>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_n7: mod_morph_n7 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N7>, <&kp AMPS>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_n8: mod_morph_n8 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp ASTRK>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_n9: mod_morph_n9 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp LS(N9)>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_n0: mod_morph_n0 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp NUMBER_0>, <&kp RPAR>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_hash_tilde: mod_morph_hash_tilde {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp HASH>, <&kp LS(GRAVE)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -125,30 +40,21 @@
         mm_a_umlaut: mod_morph_a_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RA(Q)>, <&kp RA(LS(Q))>;
-
-            // ä / Ä
-
+            bindings = <&kp DE_A_UMLAUT>, <&kp RS(DE_A_UMLAUT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_o_umlaut: mod_morph_o_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RA(P)>, <&kp RA(LS(P))>;
-
-            // ö / Ö
-
+            bindings = <&kp DE_O_UMLAUT>, <&kp RS(DE_O_UMLAUT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_u_umlaut: mod_morph_u_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RA(Y)>, <&kp RA(LS(Y))>;
-
-            // ü / Ü
-
+            bindings = <&kp DE_U_UMLAUT>, <&kp RS(DE_U_UMLAUT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -158,7 +64,6 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp LS(HOME)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -166,7 +71,6 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOWN>, <&kp LS(PG_DN)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -174,7 +78,6 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LS(END)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -182,47 +85,48 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp UP>, <&kp LS(PG_UP)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_e_euro: mod_morph_e_euro {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp E>, <&kp RA(N5)>;
+            bindings = <&kp E>, <&kp DE_EURO>; // Apple ISO: € is AltGr+E
+            mods = <(MOD_LALT)>;
+            // E €
+        };
+
+        mm_d_dollar: mod_morph_d_dollar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp D>, <&kp DOLLAR>;
 
             mods = <(MOD_LALT)>;
 
-            // E €
+            // D $
         };
 
         mm_p_para: mod_morph_p_para {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp P>, <&kp RA(N3)>;
-
+            bindings = <&kp P>, <&kp DE_SECTION>;
             mods = <(MOD_LALT)>;
-
             // P §
         };
 
         mm_s_eszett: mod_morph_s_eszett {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp S>, <&kp RA(S)>;
-
+            bindings = <&kp S>, <&kp DE_SZ>;
             mods = <(MOD_LALT)>;
-
             // S ß
         };
 
         mm_l_at: mod_morph_l_at {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp L>, <&kp LS(N2)>;
-
+            bindings = <&kp L>, <&kp DE_AT>; // Apple ISO: @ is AltGr+L
             mods = <(MOD_LALT)>;
-
             // L @
         };
 
@@ -230,9 +134,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp A>, <&mm_a_umlaut>;
-
             mods = <(MOD_LALT)>;
-
             // A ä/Ä
         };
 
@@ -240,9 +142,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp O>, <&mm_o_umlaut>;
-
             mods = <(MOD_LALT)>;
-
             // O ö/Ö
         };
 
@@ -250,9 +150,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp U>, <&mm_u_umlaut>;
-
             mods = <(MOD_LALT)>;
-
             // U ü/Ü
         };
 
@@ -260,31 +158,27 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp ENTER>, <&kp ESCAPE>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_comma_semi: mod_morph_comma_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
-
+            bindings = <&kp DE_COMMA>, <&kp DE_SEMICOLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_dot_colon: mod_morph_dot_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
-
+            bindings = <&kp DE_DOT>, <&kp DE_COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_minus_under: mod_morph_minus_under {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp UNDER>;
-
+            bindings = <&kp DE_MINUS>, <&kp DE_UNDER>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -292,35 +186,34 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LBRC>, <&kp RBRC>;
+            bindings = <&kp DE_LEFT_BRACE>, <&kp DE_RIGHT_BRACE>; // { = RA(N7), } = RA(N8)
         };
 
         td_paren: tap_dance_paren {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LPAR>, <&kp LS(N0)>;
+            bindings = <&kp DE_LEFT_PARENTHESIS>, <&kp DE_RIGHT_PARENTHESIS>; // ( = LS(N8), ) = LS(N9)
         };
 
         td_bracket: tap_dance_bracket {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LBKT>, <&kp RBKT>;
+            bindings = <&kp DE_LEFT_BRACKET>, <&kp DE_RIGHT_BRACKET>; // [ = RA(N5), ] = RA(N6)
         };
 
         td_angle: tap_dance_angle {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LT>, <&kp GT>;
+            bindings = <&kp DE_LESS_THAN>, <&kp DE_GREATER_THAN>;
         };
 
         mm_question_excl: mod_morph_question_excl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp LS(N1)>;
-
+            bindings = <&kp DE_QMARK>, <&kp DE_EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -331,7 +224,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp PLUS>,
+                <&kp DE_PLUS>,
                 <&macro_release>,
                 <&kp LALT>;
         };
@@ -356,7 +249,7 @@
             display-name = "QWERTZ";
             bindings = <
 &ht_sticky LALT LALT      &kp Q             &kp W         &mm_e_euro  &kp R  &kp T    &trans  &trans  &kp Z      &mm_u_umlaut_key  &kp I           &mm_o_umlaut_key  &mm_p_para         &mm_enter_esc
-&ht_sticky LSHIFT LSHIFT  &mm_a_umlaut_key  &mm_s_eszett  &kp D       &kp F  &kp G    &trans  &trans  &kp H      &kp J             &kp K           &mm_l_at          &mm_minus_under    &ht_sticky RSHIFT RSHIFT
+&ht_sticky LSHIFT LSHIFT  &mm_a_umlaut_key  &mm_s_eszett  &mm_d_dollar       &kp F  &kp G    &trans  &trans  &kp H      &kp J             &kp K           &mm_l_at          &mm_minus_under    &ht_sticky RSHIFT RSHIFT
 &ht_sticky LCTRL LCTRL    &kp Y             &kp X         &kp C       &kp V  &kp B                    &kp N      &kp M             &mm_comma_semi  &mm_dot_colon     &mm_question_excl  &ht_sticky RCTRL RCTRL
                                                           &kp LCMD    &mo 1  &kp TAB                  &kp SPACE  &mo 2             &mm_bspc_del
             >;
@@ -365,9 +258,9 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&unicode_input  &trans  &td_angle   &td_bracket  &td_paren  &td_curly  &trans  &trans  &kp LS(N8)  &kp N1  &kp N2  &kp N3  &kp PLUS       &kp EQUAL
-&trans          &trans  &kp LS(N4)  &kp BSLH     &kp PIPE   &kp FSLH   &trans  &trans  &kp FSLH   &kp N4  &kp N5  &kp N6  &kp MINUS      &kp LS(N3)
-&trans          &trans  &kp LS(NUBS)   &kp NUBS    &kp SQT    &kp DQT                    &kp GRAVE  &kp N7  &kp N8  &kp N9  &kp LS(N7)  &kp LS(N5)
+&unicode_input  &trans  &td_angle   &td_bracket  &td_paren  &td_curly  &trans  &trans  &kp DE_ASTERISK  &kp N1  &kp N2  &kp N3  &kp DE_PLUS       &kp DE_EQUAL
+&trans          &trans  &kp LS(N4)  &kp BSLH     &kp DE_BACKSLASH   &kp DE_PIPE   &trans  &trans  &kp DE_SLASH   &kp N4  &kp N5  &kp N6  &kp DE_MINUS      &kp DE_HASH
+&trans          &kp DE_DEGREE  &kp DE_TILDE   &kp DE_GRAVE    &kp DE_SINGLE_QUOTE    &kp DE_DOUBLE_QUOTES                    &kp DE_CARET  &kp N7  &kp N8  &kp N9  &kp DE_AMPERSAND  &kp DE_PERCENT
                                     &trans       &trans     &trans                     &trans     &kp N0  &trans
             >;
         };
