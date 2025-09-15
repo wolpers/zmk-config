@@ -318,6 +318,15 @@
             bindings = <&kp LT>, <&kp GT>;
         };
 
+        mm_question_excl: mod_morph_question_excl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK>, <&kp EXCL>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
         unicode_input: unicode_input {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -343,8 +352,8 @@
             display-name = "QWERTZ";
             bindings = <
 &ht_sticky LOPT LOPT        &kp Q             &kp W         &mm_e_euro  &kp R  &kp T    &trans  &trans  &kp Z      &mm_u_umlaut_key  &kp I           &mm_o_umlaut_key  &mm_p_para       &mm_enter_esc
-&ht_sticky LSHIFT LSHIFT    &mm_a_umlaut_key  &mm_s_eszett  &kp D       &kp F  &kp G    &trans  &trans  &kp H      &kp J             &kp K           &mm_l_at             &mm_hash_tilde   &ht_sticky RSHIFT RSHIFT
-&ht_sticky LCTRL LCTRL  &kp Y             &kp X         &kp C       &kp V  &kp B                    &kp N      &kp M             &mm_comma_semi  &mm_dot_colon     &mm_minus_under  &ht_sticky RCTRL RCTRL
+&ht_sticky LSHIFT LSHIFT    &mm_a_umlaut_key  &mm_s_eszett  &kp D       &kp F  &kp G    &trans  &trans  &kp H      &kp J             &kp K           &mm_l_at             &mm_minus_under   &ht_sticky RSHIFT RSHIFT
+&ht_sticky LCTRL LCTRL  &kp Y             &kp X         &kp C       &kp V  &kp B                    &kp N      &kp M             &mm_comma_semi  &mm_dot_colon     &mm_question_excl  &ht_sticky RCTRL RCTRL
                                                   &kp LCMD    &mo 1  &kp TAB                  &kp SPACE  &mo 2             &mm_bspc_del
             >;
         };
@@ -352,10 +361,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&unicode_input  &trans  &td_angle    &td_bracket  &td_paren  &td_curly  &trans  &trans  &kp ASTRK  &mm_n1  &mm_n2  &mm_n3  &kp PLUS   &kp EQUAL
-&trans  &trans  &trans             &kp BSLH           &kp PIPE         &kp FSLH         &trans  &trans  &kp FSLH   &mm_n4  &mm_n5  &mm_n6  &kp MINUS  &trans
-&trans  &trans  &trans             &kp GRAVE          &kp SQT          &kp DQT                          &kp CARET  &mm_n7  &mm_n8  &mm_n9  &trans     &trans
-                                   &trans             &trans           &trans                           &trans     &mm_n0  &trans
+&unicode_input  &trans  &td_angle    &td_bracket  &td_paren  &td_curly  &trans  &trans  &kp ASTRK  &kp N1  &kp N2  &kp N3  &kp PLUS   &kp EQUAL
+&trans  &trans  &trans             &kp BSLH           &kp PIPE         &kp FSLH         &trans  &trans  &kp FSLH   &kp N4  &kp N5  &kp N6  &kp MINUS  &trans
+&trans  &trans  &trans             &kp GRAVE          &kp SQT          &kp DQT                          &kp CARET  &kp N7  &kp N8  &kp N9  &trans     &trans
+                                   &trans             &trans           &trans                           &trans     &kp N0  &trans
             >;
         };
 
