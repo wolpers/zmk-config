@@ -218,6 +218,15 @@
             // S ß
         };
 
+        mm_l_at: mod_morph_l_at {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp L>, <&kp AT>;
+            mods = <(MOD_RALT)>;
+
+            // L @
+        };
+
         mm_a_umlaut_key: mod_morph_a_umlaut_key {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -390,7 +399,7 @@
             display-name = "QWERTZ";
             bindings = <
 &ht_sticky LOPT LOPT        &kp Q             &kp W         &mm_e_euro  &kp R  &kp T    &trans  &trans  &kp Z      &mm_u_umlaut_key  &kp I           &mm_o_umlaut_key  &mm_p_para       &mm_enter_esc
-&ht_sticky LSHIFT LSHIFT    &mm_a_umlaut_key  &mm_s_eszett  &kp D       &kp F  &kp G    &trans  &trans  &kp H      &kp J             &kp K           &kp L             &mm_hash_tilde   &ht_sticky RSHIFT RSHIFT
+&ht_sticky LSHIFT LSHIFT    &mm_a_umlaut_key  &mm_s_eszett  &kp D       &kp F  &kp G    &trans  &trans  &kp H      &kp J             &kp K           &mm_l_at             &mm_hash_tilde   &ht_sticky RSHIFT RSHIFT
 &ht_sticky LCTRL LCTRL  &kp Y             &kp X         &kp C       &kp V  &kp B                    &kp N      &kp M             &mm_comma_semi  &mm_dot_colon     &mm_minus_under  &ht_sticky RCTRL RCTRL
                                                   &kp LCMD    &mo 1  &kp TAB                  &kp SPACE  &mo 2             &mm_bspc_del
             >;
