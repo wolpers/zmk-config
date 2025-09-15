@@ -330,9 +330,9 @@
         unicode_input: unicode_input {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LOPT>,
+            bindings = <&macro_press &kp LALT>,
                        <&macro_tap &kp KP_PLUS>,
-                       <&macro_release &kp LOPT>;
+                       <&macro_release &kp LALT>;
         };
     };
 
@@ -351,7 +351,7 @@
         default_layer {
             display-name = "QWERTZ";
             bindings = <
-&ht_sticky LOPT LOPT        &kp Q             &kp W         &mm_e_euro  &kp R  &kp T    &trans  &trans  &kp Z      &mm_u_umlaut_key  &kp I           &mm_o_umlaut_key  &mm_p_para       &mm_enter_esc
+&ht_sticky LALT LALT        &kp Q             &kp W         &mm_e_euro  &kp R  &kp T    &trans  &trans  &kp Z      &mm_u_umlaut_key  &kp I           &mm_o_umlaut_key  &mm_p_para       &mm_enter_esc
 &ht_sticky LSHIFT LSHIFT    &mm_a_umlaut_key  &mm_s_eszett  &kp D       &kp F  &kp G    &trans  &trans  &kp H      &kp J             &kp K           &mm_l_at             &mm_minus_under   &ht_sticky RSHIFT RSHIFT
 &ht_sticky LCTRL LCTRL  &kp Y             &kp X         &kp C       &kp V  &kp B                    &kp N      &kp M             &mm_comma_semi  &mm_dot_colon     &mm_question_excl  &ht_sticky RCTRL RCTRL
                                                   &kp LCMD    &mo 1  &kp TAB                  &kp SPACE  &mo 2             &mm_bspc_del
