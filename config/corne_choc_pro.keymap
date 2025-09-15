@@ -99,7 +99,7 @@
         mm_n9: mod_morph_n9 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp LPAR>;
+            bindings = <&kp N9>, <&kp LS(N9)>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -115,7 +115,7 @@
         mm_hash_tilde: mod_morph_hash_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp HASH>, <&kp TILDE>;
+            bindings = <&kp HASH>, <&kp LS(GRAVE)>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -191,7 +191,7 @@
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp RA(N5)>;
 
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_LALT)>;
 
             // E €
         };
@@ -201,7 +201,7 @@
             #binding-cells = <0>;
             bindings = <&kp P>, <&kp RA(N3)>;
 
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_LALT)>;
 
             // P §
         };
@@ -211,7 +211,7 @@
             #binding-cells = <0>;
             bindings = <&kp S>, <&kp RA(S)>;
 
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_LALT)>;
 
             // S ß
         };
@@ -219,9 +219,9 @@
         mm_l_at: mod_morph_l_at {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp L>, <&kp AT>;
+            bindings = <&kp L>, <&kp LS(N2)>;
 
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_LALT)>;
 
             // L @
         };
@@ -231,7 +231,7 @@
             #binding-cells = <0>;
             bindings = <&kp A>, <&mm_a_umlaut>;
 
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_LALT)>;
 
             // A ä/Ä
         };
@@ -241,7 +241,7 @@
             #binding-cells = <0>;
             bindings = <&kp O>, <&mm_o_umlaut>;
 
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_LALT)>;
 
             // O ö/Ö
         };
@@ -251,7 +251,7 @@
             #binding-cells = <0>;
             bindings = <&kp U>, <&mm_u_umlaut>;
 
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_LALT)>;
 
             // U ü/Ü
         };
@@ -299,7 +299,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LPAR>, <&kp RPAR>;
+            bindings = <&kp LPAR>, <&kp LS(N0)>;
         };
 
         td_bracket: tap_dance_bracket {
@@ -319,7 +319,7 @@
         mm_question_excl: mod_morph_question_excl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
+            bindings = <&kp QMARK>, <&kp LS(N1)>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -331,7 +331,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_PLUS>,
+                <&kp PLUS>,
                 <&macro_release>,
                 <&kp LALT>;
         };
@@ -365,9 +365,9 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&unicode_input  &trans  &td_angle   &td_bracket  &td_paren  &td_curly  &trans  &trans  &kp ASTRK  &kp N1  &kp N2  &kp N3  &kp PLUS       &kp EQUAL
-&trans          &trans  &kp DOLLAR  &kp BSLH     &kp PIPE   &kp FSLH   &trans  &trans  &kp FSLH   &kp N4  &kp N5  &kp N6  &kp MINUS      &kp HASH
-&trans          &trans  &kp TILDE   &kp GRAVE    &kp SQT    &kp DQT                    &kp CARET  &kp N7  &kp N8  &kp N9  &kp AMPERSAND  &kp PERCENT
+&unicode_input  &trans  &td_angle   &td_bracket  &td_paren  &td_curly  &trans  &trans  &kp LS(N8)  &kp N1  &kp N2  &kp N3  &kp PLUS       &kp EQUAL
+&trans          &trans  &kp LS(N4)  &kp BSLH     &kp PIPE   &kp FSLH   &trans  &trans  &kp FSLH   &kp N4  &kp N5  &kp N6  &kp MINUS      &kp LS(N3)
+&trans          &trans  &kp LS(NUBS)   &kp NUBS    &kp SQT    &kp DQT                    &kp GRAVE  &kp N7  &kp N8  &kp N9  &kp LS(N7)  &kp LS(N5)
                                     &trans       &trans     &trans                     &trans     &kp N0  &trans
             >;
         };

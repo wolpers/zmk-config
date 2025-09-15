@@ -1,6 +1,6 @@
 
-operating system set to apple keyboard.
-ctrl + opt -> altgr
+operating system set to apple iso keyboard.
+
 
 ```
 ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐    ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
