@@ -58,36 +58,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Arrow keys with shift combinations
-
-        mm_left_shome: mod_morph_left_shifthome {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&kp LS(HOME)>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_down_spgdn: mod_morph_down_shiftpagedown {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOWN>, <&kp LS(PG_DN)>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_right_send: mod_morph_right_shiftend {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&kp LS(END)>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_up_spgup: mod_morph_up_shiftpageup {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp UP>, <&kp LS(PG_UP)>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         mm_e_euro: mod_morph_e_euro {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -186,7 +156,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp DE_LEFT_BRACE>, <&kp DE_RIGHT_BRACE>; // { = RA(N7), } = RA(N8)
+            bindings = <&kp RA(N8)>, <&kp RA(N9)>;
         };
 
         td_paren: tap_dance_paren {
@@ -200,7 +170,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp DE_LEFT_BRACKET>, <&kp DE_RIGHT_BRACKET>; // [ = RA(N5), ] = RA(N6)
+            bindings = <&kp RA(N5)>, <&kp RA(N6)>;
         };
 
         td_angle: tap_dance_angle {
@@ -217,17 +187,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        unicode_input: unicode_input {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp DE_PLUS>,
-                <&macro_release>,
-                <&kp LALT>;
-        };
     };
 
     conditional_layers {
@@ -248,9 +207,9 @@
         default_layer {
             display-name = "QWERTZ";
             bindings = <
-&ht_sticky LALT LALT      &kp Q             &kp W         &mm_e_euro  &kp R  &kp T    &trans  &trans  &kp Z      &mm_u_umlaut_key  &kp I           &mm_o_umlaut_key  &mm_p_para         &mm_enter_esc
-&ht_sticky LSHIFT LSHIFT  &mm_a_umlaut_key  &mm_s_eszett  &mm_d_dollar       &kp F  &kp G    &trans  &trans  &kp H      &kp J             &kp K           &mm_l_at          &mm_minus_under    &ht_sticky RSHIFT RSHIFT
-&ht_sticky LCTRL LCTRL    &kp Y             &kp X         &kp C       &kp V  &kp B                    &kp N      &kp M             &mm_comma_semi  &mm_dot_colon     &mm_question_excl  &ht_sticky RCTRL RCTRL
+&ht_sticky LALT LALT      &kp DE_Q             &kp DE_W         &mm_e_euro  &kp DE_R  &kp DE_T    &trans  &trans  &kp DE_Z      &mm_u_umlaut_key  &kp DE_I           &mm_o_umlaut_key  &mm_p_para         &mm_enter_esc
+&ht_sticky LSHIFT LSHIFT  &mm_a_umlaut_key  &mm_s_eszett  &mm_d_dollar       &kp DE_F  &kp DE_G    &trans  &trans  &kp DE_H      &kp DE_J             &kp DE_K           &mm_l_at          &mm_minus_under    &ht_sticky RSHIFT RSHIFT
+&ht_sticky LCTRL LCTRL    &kp DE_Y             &kp DE_X         &kp DE_C       &kp DE_V  &kp DE_B                    &kp DE_N      &kp DE_M             &mm_comma_semi  &mm_dot_colon     &mm_question_excl  &ht_sticky RCTRL RCTRL
                                                           &kp LCMD    &mo 1  &kp TAB                  &kp SPACE  &mo 2             &mm_bspc_del
             >;
         };
@@ -258,8 +217,8 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&unicode_input  &trans  &td_angle   &td_bracket  &td_paren  &td_curly  &trans  &trans  &kp DE_ASTERISK  &kp N1  &kp N2  &kp N3  &kp DE_PLUS       &kp DE_EQUAL
-&trans          &trans  &kp LS(N4)  &kp BSLH     &kp DE_BACKSLASH   &kp DE_PIPE   &trans  &trans  &kp DE_SLASH   &kp N4  &kp N5  &kp N6  &kp DE_MINUS      &kp DE_HASH
+&trans  &trans  &td_angle   &td_bracket  &td_paren  &td_curly  &trans  &trans  &kp DE_ASTERISK  &kp N1  &kp N2  &kp N3  &kp DE_PLUS       &kp DE_EQUAL
+&trans          &trans  &trans  &trans     &kp DE_BACKSLASH   &kp DE_PIPE   &trans  &trans  &kp DE_SLASH   &kp N4  &kp N5  &kp N6  &kp DE_MINUS      &kp DE_HASH
 &trans          &kp DE_DEGREE  &kp DE_TILDE   &kp DE_GRAVE    &kp DE_SINGLE_QUOTE    &kp DE_DOUBLE_QUOTES                    &kp DE_CARET  &kp N7  &kp N8  &kp N9  &kp DE_AMPERSAND  &kp DE_PERCENT
                                     &trans       &trans     &trans                     &trans     &kp N0  &trans
             >;
@@ -268,8 +227,8 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &trans  &trans          &mm_up_spgup    &trans          &trans  &trans  &trans  &trans  &kp F1   &kp F2  &kp F3  &trans   &trans
-&trans  &trans  &mm_left_shome  &mm_down_spgdn  &mm_right_send  &trans  &trans  &trans  &trans  &kp F4   &kp F5  &kp F6  &trans   &trans
+&trans  &trans  &kp END          &kp UP    &kp HOME          &kp PG_UP  &trans  &trans  &trans  &kp F1   &kp F2  &kp F3  &trans   &trans
+&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &trans  &trans  &trans  &kp F4   &kp F5  &kp F6  &trans   &trans
 &trans  &trans  &trans          &trans          &trans          &trans                  &trans  &kp F7   &kp F8  &kp F9  &kp F11  &kp F12
                                 &trans          &trans          &trans                  &trans  &kp F10  &trans
             >;
